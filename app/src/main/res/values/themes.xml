@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Seblaza" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Seblaza" parent="Base.Theme.Seblaza" />
+
+    <style name="TextoTitulo" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextoParrafo" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">30sp</item>
+        <item name="android:justificationMode">inter_word</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#F2B263</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_seblaza</item>
+    </style>
+
+</resources>

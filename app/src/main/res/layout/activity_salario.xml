@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical"
+    tools:context=".SalarioActivity">
+
+    <!--BARRA SUPERIOR DE LA VENTANA-->
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/skyblue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="2dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_personas"
+                app:tint="#2B579A" />
+
+            <TextView
+                android:id="@+id/textPlanillas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Sistema de  Planillas de SEBLAZA"
+                android:textColor="#333333"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_minimize"
+                app:tint="#666666" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_maximize"
+                app:tint="#666666" />
+
+            <ImageView
+                android:id="@+id/CerraSesion"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_close"
+                app:tint="#666666" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:text="PAGO DE EMPLEADOS"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <!--DATOS DEL EMPLEADO-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#2C7CCA"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E8F1FA"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                app:srcCompat="@drawable/ic_person"
+                                app:tint="#2B579A" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="Datos del Empleado"
+                                android:textColor="#333333"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!--Empleado-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvEmpleadoLabel"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Empleado"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/editEmpleado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_input"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:padding="6dp" />
+                        </LinearLayout>
+
+                        <!--horas trabajadas-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvHorasLabel"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Horas trabajadas"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/editHoras"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:background="@drawable/bg_input"
+                                android:ems="10"
+                                android:inputType="number"
+                                android:padding="6dp" />
+                        </LinearLayout>
+
+                        <!--tarifa por hora-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTarifaLabel"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Tarifa por hora"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/editTarifa"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:background="@drawable/bg_input"
+                                android:ems="10"
+                                android:inputType="numberDecimal"
+                                android:padding="6dp" />
+
+                        </LinearLayout>
+
+                        <!--botones-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="60dp"
+                            android:layout_marginVertical="10dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnProcesar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="#0066FF"
+                                android:text="Procesar"
+                                app:icon="@drawable/ic_tuerca" />
+
+                            <Button
+                                android:id="@+id/btnLimpiar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="#C5CAE9"
+                                android:text="Limpiar"
+                                android:textColor="#333333"
+                                android:textSize="10sp"
+                                app:icon="@drawable/ic_limpiar"
+                                app:iconTint="#333333" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!--Resultado del calculo-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#2C7CCA"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E8F1FA"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageResultado"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                app:srcCompat="@drawable/ic_barras"
+                                app:tint="#2B579A" />
+
+                            <TextView
+                                android:id="@+id/textResultado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="Resultado del Cálculo"
+                                android:textColor="#333333"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!--Empleado-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResEmpleado"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:text="Empleado" />
+
+                            <TextView
+                                android:id="@+id/MuestraEmpleado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#CCCCCC" />
+
+                        <!--resultado horas trabajadas-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResHoras"
+                                android:layout_width="170sp"
+                                android:layout_height="wrap_content"
+
+                                android:text="Horas Trabajadas" />
+
+                            <TextView
+                                android:id="@+id/MuestraHoras"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#CCCCCC" />
+                        <!--resultado tarifa por hora-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResTarifa"
+                                android:layout_width="170sp"
+                                android:layout_height="wrap_content"
+
+                                android:text="Tarifa por hora" />
+
+                            <TextView
+                                android:id="@+id/MuestraTarifa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#CCCCCC" />
+
+                        <!--resultado Sueldo Bruto-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResSueldoBruto"
+                                android:layout_width="170sp"
+                                android:layout_height="wrap_content"
+
+                                android:text="Sueldo Bruto" />
+
+                            <TextView
+                                android:id="@+id/MuestraSueldoBruto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#CCCCCC" />
+
+
+                        <!--resultado DEscuento EsSalud-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResDesEssalud"
+                                android:layout_width="170sp"
+                                android:layout_height="wrap_content"
+
+                                android:text="Descuento EsSalud" />
+
+                            <TextView
+                                android:id="@+id/MuestraDescuentoEssalud"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#CCCCCC" />
+
+                        <!--resultado DEscuento AFP-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResDesAfp"
+                                android:layout_width="170sp"
+                                android:layout_height="wrap_content"
+
+                                android:text="Descuento AFP" />
+
+                            <TextView
+                                android:id="@+id/MuestraDescuentoAfp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#CCCCCC" />
+
+                        <!--resultado Sueldo neto-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblResSueldoNeto"
+                                android:layout_width="170sp"
+                                android:layout_height="wrap_content"
+
+                                android:text="Sueldo Neto" />
+
+                            <TextView
+                                android:id="@+id/MuestraSueldoNeto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <!--BARRA INFERIOR DE LA VENTANA-->
+        <LinearLayout
+            android:id="@+id/layoutBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/skyblue"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Todos los derechos reservados a Pedro Martin Trillo Cacsire"
+                android:textAlignment="center"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

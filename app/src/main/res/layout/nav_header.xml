@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/bg_nav_header"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Icono / Logo -->
+
+    <!-- Nombre de la Empresa -->
+
+    <ImageView
+        android:id="@+id/imgNavHeader"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_input"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="SEBLAZA EIRL"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Eslogan / Subtítulo -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ventilación y Alarmas de Construcción"
+        android:textColor="#D0E4EF"
+        android:textSize="12sp" />
+
+</LinearLayout>

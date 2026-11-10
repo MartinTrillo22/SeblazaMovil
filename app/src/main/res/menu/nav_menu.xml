@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_nav_home"
+            android:title="Inicio" />
+
+        <item
+            android:id="@+id/nav_nosotros"
+            android:icon="@drawable/ic_nav_info"
+            android:title="Nosotros" />
+
+        <item
+            android:id="@+id/nav_contactos"
+            android:icon="@drawable/ic_nav_contact"
+            android:title="Contactos" />
+    </group>
+
+    <item android:title="Cuenta">
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_nav_login"
+                android:title="Iniciar Sesión" />
+        </menu>
+    </item>
+
+</menu>

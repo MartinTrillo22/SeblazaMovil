@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AzulAcero"
+    android:orientation="vertical"
+    tools:context=".NosotrosFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historia y Logística Operativa"
+                android:textAlignment="center"
+                android:textColor="@color/AzulMarino" />
+
+            <TextView
+                android:id="@+id/txtParrafoNosotros"
+                style="@style/TextoParrafo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="Fundada en 2016 como SEBLAZA EIRL bajo la dirección de nuestro Gerente General, Marco Blacido, operamos con una estructura logística optimizada y directa. Nuestro equipo interno gestiona minuciosamente la recepción, revisión y despacho de cada producto. Contamos con una unidad de movilidad particular exclusiva para garantizar entregas puntuales y seguras en la ubicación exacta de tu cliente final, eliminando tiempos de espera con terceros y asegurando un trato personalizado en cada entrega."
+                android:textColor="@color/AzulMarino" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

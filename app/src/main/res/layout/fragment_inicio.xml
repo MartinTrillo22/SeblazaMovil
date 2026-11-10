@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrisClaro"
+    android:orientation="vertical"
+    tools:context=".InicioFragment">
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soluciones de Ventilación y Alarmas"
+                android:textAlignment="center"
+                android:textColor="@color/GrisCarbón" />
+
+            <TextView
+                android:id="@+id/txtParrafoInicio"
+                style="@style/TextoParrafo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="Especialistas en equipamiento de seguridad y climatización para proyectos de construcción. Nuestro catálogo principal destaca por la provisión de extractores de aire para baños de alta eficiencia, detectores de humo precisos y sensores de monóxido de carbono. Aseguramos la disponibilidad de cada equipo para mantener tu obra en marcha, brindando un proceso de compra ágil y respaldado por facturación electrónica directa a través del portal de SUNAT para optimizar tus trámites administrativos."
+                android:textColor="@color/GrisCarbón" />
+
+
+        </LinearLayout>
+        </ScrollView>
+</LinearLayout>

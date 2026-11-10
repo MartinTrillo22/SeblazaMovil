@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue1">#9AAED7E2</color>
+    <color name="skyblue">#D0E4EF</color>
+    <color name="GrisClaro">#F8F9FA</color>
+    <color name="GrisCarbón">#333333</color>
+    <color name="AzulAcero">#B7D0E9</color>
+    <color name="AzulMarino">#0F172A</color>
+    <color name="GrisPizarra">#37474F</color>
+    <color name="Blanco">#FFFFFF</color>
+    <color name="AzulProfundo">#0B132B</color>
+
+</resources>
