@@ -52,7 +52,7 @@
 
                 <!-- Campo: Nombre Completo -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilNombre"
+                    android:id="@+id/layoutNombre"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                     app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etNombre"
+                        android:id="@+id/txtNombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName" />
@@ -69,7 +69,7 @@
 
                 <!-- Campo: Correo Electrónico -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilCorreo"
+                    android:id="@+id/layoutCorreo"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     app:startIconDrawable="@android:drawable/ic_dialog_email">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etCorreo"
+                        android:id="@+id/txtCorreo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress" />
@@ -86,16 +86,16 @@
 
                 <!-- Campo: Teléfono / Celular -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilTelefono"
+                    android:id="@+id/layoutCelular"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:hint="Teléfono / Celular"
+                    android:hint="Celular"
                     app:startIconDrawable="@android:drawable/ic_menu_call">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etTelefono"
+                        android:id="@+id/txtCelular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="phone" />
@@ -103,7 +103,7 @@
 
                 <!-- Campo: Asunto -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilAsunto"
+                    android:id="@+id/layoutAsunto"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     android:hint="Asunto">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etAsunto"
+                        android:id="@+id/txtAsunto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text" />
@@ -119,7 +119,7 @@
 
                 <!-- Campo: Mensaje -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilMensaje"
+                    android:id="@+id/layoutMensaje"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                     android:hint="Escribe tu mensaje aquí...">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etMensaje"
+                        android:id="@+id/txtMensaje"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="top|start"
@@ -137,16 +137,41 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Botón: Enviar Mensaje -->
-                <Button
-                    android:id="@+id/btnEnviarContacto"
+
+                <!-- Botón: Enviar Mensaje -->
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/AzulMarino"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="Enviar Mensaje"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnEnviarMensaje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/AzulMarino"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:layout_weight="1"
+                        android:text="Enviar"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnLimpiar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/AzulMarino"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="Limpiar"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
             </LinearLayout>
 

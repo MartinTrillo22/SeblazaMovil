@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067288885452",
+    "project_id": "seblaza-app",
+    "storage_bucket": "seblaza-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067288885452:android:41c3fa26e27e6c705faa69",
+        "android_client_info": {
+          "package_name": "com.example.seblaza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi618HPwpBNgbbGhtMt18qTESMTsh7Sf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

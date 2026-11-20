@@ -5,29 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.FirebaseFirestore
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ContactosFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ContactosFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,23 +23,86 @@ class ContactosFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_contactos, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ContactosFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ContactosFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val nomCompleto=view.findViewById<EditText>(R.id.txtNombre)
+        val correo=view.findViewById<EditText>(R.id.txtCorreo)
+        val celular=view.findViewById<EditText>(R.id.txtCelular)
+        val asunto=view.findViewById<EditText>(R.id.txtAsunto)
+        val mensaje=view.findViewById<EditText>(R.id.txtMensaje)
+        val enviar=view.findViewById<Button>(R.id.btnEnviarMensaje)
+        val limpiar=view.findViewById<Button>(R.id.btnLimpiar)
+
+        val db= FirebaseFirestore.getInstance()
+        val contexto=requireContext().applicationContext
+
+        enviar.setOnClickListener {
+            val nomCompletoTexto=nomCompleto.text.toString().trim()
+            val correoTexto=correo.text.toString().trim()
+            val celularTexto=celular.text.toString().trim()
+            val asuntoTexto=asunto.text.toString().trim()
+            val mensajeTexto=mensaje.text.toString().trim()
+
+            if (nomCompletoTexto.isEmpty() || correoTexto.isEmpty()
+                || celularTexto.isEmpty() || asuntoTexto.isEmpty() || mensajeTexto.isEmpty()){
+                Toast.makeText(contexto,
+                    "Completa correctamente los campos",
+                    Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
+
+            val datos= hashMapOf(
+                "nombreCompleto" to nomCompletoTexto,
+                "correo" to correoTexto,
+                "celular" to celularTexto,
+                "asunto" to asuntoTexto,
+                "mensaje" to mensajeTexto
+            )
+            enviar.isEnabled=false
+
+            //conexion
+            db.collection("contactos")
+                .add(datos)
+                .addOnSuccessListener {
+                    Toast.makeText(
+                        contexto,
+                        "Datos guardados correctamente",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    nomCompleto.text.clear()
+                    correo.text.clear()
+                    celular.text.clear()
+                    asunto.text.clear()
+                    mensaje.text.clear()
+                    nomCompleto.requestFocus()
+                }
+                .addOnFailureListener { error ->
+                    Toast.makeText(
+                        contexto,
+                        "Error: ${error.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                .addOnCompleteListener {
+                    enviar.isEnabled=true
+                }
+
+
+        }
+
+
+        limpiar.setOnClickListener {
+            nomCompleto.text.clear()
+            correo.text.clear()
+            celular.text.clear()
+            correo.text.clear()
+            asunto.text.clear()
+            mensaje.text.clear()
+            nomCompleto.requestFocus()
+        }
+
     }
+
 }
